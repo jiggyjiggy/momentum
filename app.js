@@ -1,35 +1,56 @@
-const title = document.querySelector(".hello h1");
+const h1 = document.querySelector(".hello h1");
 
-title.innerText = "aaa"
+h1.innerText = "aaa"
 
-console.dir(title)
+console.dir(h1)
 
-// function handleTitleClick() {
-//     title.style.color ="red";
+// function handleh1Click() {
+//     h1.style.color ="red";
 // }
 
-// const handleTitleClick = () => {console.log("title was clicked")}
-const handleTitleClick = () => {
-    title.style.color ="red"
+// const handleh1Click = () => {console.log("h1 was clicked")}
+const handleh1Click = () => {
+    h1.style.color ="red"
     console.log("abc")
 }
 
 const handleMouseEnter = () => {
-    title.innerText = "mouse is here"
+    h1.innerText = "mouse is here"
 }
 
 const handleMouseLeave = () => {
-    title.innerText = "gone"
+    h1.innerText = "gone"
 }
 
-title.addEventListener("click", handleTitleClick)
-title.addEventListener("mouseenter", handleMouseEnter)
-title.addEventListener("mouseleave", handleMouseLeave)
-
-
-
-
-
+// h1.addEventListener("click", handleh1Click)
+// h1.addEventListener("mouseenter", handleMouseEnter)
+// h1.addEventListener("mouseleave", handleMouseLeave)
 
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLHeadingElement
 
+// h1.onclick = handleh1Click;
+// h1.onmouseenter = handleMouseEnter;
+// h1.onmouseleave = handleMouseLeave;
+
+const handleWindowResize = () => {
+    document.body.style.backgroundColor = "tomato"
+}
+
+const handleWindowCopy = () => {
+    alert("copier");
+}
+
+const handleWindowOffline = () => {
+    alert("SOS, No wifi");
+}
+const handleWindowOnline = () => {
+    alert("good wifi");
+}
+h1.addEventListener("click", handleh1Click)
+h1.addEventListener("mouseenter", handleMouseEnter)
+h1.addEventListener("mouseleave", handleMouseLeave)
+
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
