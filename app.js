@@ -14,7 +14,17 @@ const handleTitleClick = () => {
     console.log("abc")
 }
 
+const handleMouseEnter = () => {
+    title.innerText = "mouse is here"
+}
+
+const handleMouseLeave = () => {
+    title.innerText = "gone"
+}
+
 title.addEventListener("click", handleTitleClick)
+title.addEventListener("mouseenter", handleMouseEnter)
+title.addEventListener("mouseleave", handleMouseLeave)
 
 
 
